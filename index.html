@@ -101,66 +101,105 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<input type="radio" name="slides" id="slides_2" />
 				<input type="radio" name="slides" id="slides_3" />
 				<input type="radio" name="slides" id="slides_4" />
-				<ul>
+				<!-- <ul>
 					<li>
-						<div class="banner-top">
+						<div class="banner-top mySlides" style="display: none;">
 							<div class="container">
 								<div class="w3layouts-banner-info text-center">
 									<h4 class="text-wh" style="color: black; font-size: 35px; font-weight: bold;">Welcome to KEXA Ventures Pvt Ltd</h4>
-									<!-- <p class="text-li mx-auto mt-2">Ut enim ad minim quis nostrud exerci sed do eiusmod tempor incididunt ut
+									<p class="text-li mx-auto mt-2">Ut enim ad minim quis nostrud exerci sed do eiusmod tempor incididunt ut
 										labore et
 										dolore magna aliqua.</p>
-									<a href="#about" class="button-style scroll mt-sm-5 mt-4">Read More</a> -->
+									<a href="#about" class="button-style scroll mt-sm-5 mt-4">Read More</a>
 								</div>
 							</div>
 						</div>
 					</li>
 					<li>
-						<div class="banner-top1">
+						<div class="banner-top1 mySlides">
 							<div class="container">
-								<!-- <div class="w3layouts-banner-info text-center">
+								<div class="w3layouts-banner-info text-center">
 									<h3 class="text-wh">Plants For Healthy</h3>
 									<p class="text-li mx-auto mt-2">Ut enim ad minim quis nostrud exerci sed do eiusmod tempor incididunt ut
 										labore et
 										dolore magna aliqua.</p>
 									<a href="#about" class="button-style scroll mt-sm-5 mt-4">Read More</a>
-								</div> -->
+								</div>
 							</div>
 						</div>
 					</li>
 					<li>
-						<div class="banner-top2">
+						<div class="banner-top2 mySlides">
 							<div class="container">
-								<!-- <div class="w3layouts-banner-info text-center">
+								<div class="w3layouts-banner-info text-center">
 									<h3 class="text-wh">Welcome to Plants</h3>
 									<p class="text-li mx-auto mt-2">Ut enim ad minim quis nostrud exerci sed do eiusmod tempor incididunt ut
 										labore et
 										dolore magna aliqua.</p>
 									<a href="#about" class="button-style scroll mt-sm-5 mt-4">Read More</a>
-								</div> -->
+								</div>
 							</div>
 						</div>
 					</li>
 					<li>
-						<div class="banner-top3">
+						<div class="banner-top3 mySlides">
 							<div class="container">
-								<!-- <div class="w3layouts-banner-info text-center">
+								<div class="w3layouts-banner-info text-center">
 									<h3 class="text-wh">Plants For Healthy</h3>
 									<p class="text-li mx-auto mt-2">Ut enim ad minim quis nostrud exerci sed do eiusmod tempor incididunt ut
 										labore et
 										dolore magna aliqua.</p>
 									<a href="#about" class="button-style scroll mt-sm-5 mt-4">Read More</a>
-								</div> -->
+								</div>
 							</div>
 						</div>
 					</li>
-				</ul>
-				<div class="arrows">
+				</ul> -->
+
+				<div class="slideshow-container">
+<!-- <ul>
+	<li> -->
+<div class="mySlides fade">
+
+  <img src="images/banner_1.png" style="position: relative;">
+  <h3 style="position: absolute; top: 150px; left: 400px; color: black; font-size: 40px;">Welcome To KEXA Ventures Pvt. Ltd.</h3>
+</div>
+<!-- </li> -->
+
+
+<div class="mySlides fade">
+
+  <img src="images/banner_3.png" style="width:100%">
+
+</div>
+
+<div class="mySlides fade">
+
+  <img src="images/banner_2.png" style="width:100%">
+
+</div>
+
+<div class="mySlides fade">
+
+  <img src="images/banner_4.png" style="width:100%">
+
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>
+  <span class="dot"></span> 
+</div>
+				<!-- <div class="arrows">
 					<label for="slides_1"></label>
 					<label for="slides_2"></label>
 					<label for="slides_3"></label>
 					<label for="slides_4"></label>
-				</div>
+				</div> -->
 			</div>
 			<div class="icon-w3">
 				<a href="#about" class="scroll">
@@ -171,6 +210,28 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<!-- //banner -->
 	</div>
 	<!-- //main -->
+
+	<script>
+		var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" activer", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 5000); // Change image every 2 seconds
+}
+	</script>
 
 	<!-- about -->
 	<section class="about" id="about">
